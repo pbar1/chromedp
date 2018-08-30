@@ -18,6 +18,7 @@ import (
 	"github.com/chromedp/cdproto/dom"
 	"github.com/chromedp/cdproto/inspector"
 	"github.com/chromedp/cdproto/log"
+	"github.com/chromedp/cdproto/network"
 	"github.com/chromedp/cdproto/page"
 	"github.com/chromedp/cdproto/runtime"
 
@@ -101,7 +102,7 @@ func (h *TargetHandler) Run(ctxt context.Context) error {
 	for _, a := range []Action{
 		log.Enable(),
 		runtime.Enable(),
-		//network.Enable(),
+		network.Enable(),
 		inspector.Enable(),
 		page.Enable(),
 		dom.Enable(),
