@@ -258,7 +258,7 @@ func (h *TargetHandler) processEvent(ctxt context.Context, msg *cdproto.Message)
 
 	case "DOM":
 		h.domWaitGroup.Add(1)
-		go h.domEvent(ctxt, ev)
+		h.domEvent(ctxt, ev)
 	}
 
 	return nil
